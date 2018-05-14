@@ -62,6 +62,7 @@ class GameController {
 
     initListeners() {
       document.body.addEventListener('click', this.player.jump.bind(this.player));
+      document.body.addEventListener('touchstart', this.player.jump.bind(this.player));
       document.body.addEventListener('keydown', function(e) {
         if (e.keyCode === 32) {
           this.player.jump();
